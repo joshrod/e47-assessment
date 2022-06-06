@@ -1,0 +1,67 @@
+.dual-color-section {
+    position: relative;
+
+    .dual-color-cyan-bg {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(104,203,223,0.1);
+        z-index: -1;
+        @include breakpoint(md) {
+            width: 60%;
+            height: 100%;
+            bottom: 0;
+            left: auto;
+        }
+    }
+
+    .dual-color-section-container {
+        @include breakpoint(md) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+
+        .dual-color-section-content {
+            padding: 3rem $sm-x;
+            @include breakpoint(md) {
+                padding: 0 5rem;
+            }
+            @include breakpoint(lg) {
+                padding: 0 8rem;
+            }
+            @include breakpoint(xl) {
+                padding: 0 12rem;
+            }
+            @include breakpoint(fhd) {
+                padding: 0 20rem;
+            }
+    
+            .dual-color-section-content-title {
+                font-family: $robotoslab;
+                @include breakpoint(xxl) {
+                    font-size: 3rem;
+                }
+            }
+
+            .dual-color-section-content-paragraph {
+                @include breakpoint(xxl) {
+                    font-size: 2rem;
+                }
+                @include breakpoint(fhd) {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+
+        .dual-color-section-image-container {
+            @include breakpoint(md) {
+                flex: 0 0 45%;
+            }
+        }
+    }    
+}

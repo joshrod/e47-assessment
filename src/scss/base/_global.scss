@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.25;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: relative;
+}
+
+h1,h2,h3,h4,h5,h6,ul,p,a {
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.primary-container,.secondary-container {
+    width: 100%;
+    max-width: 192rem;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.primary-container {
+    padding: $md-y $sm-x;
+    @include breakpoint(md) {
+        padding: $md-y $md-x;
+    }
+    @include breakpoint(xl) {
+        padding: $lg-y $lg-x;
+    }
+}
+
+.secondary-container {
+    padding-bottom: 5rem;
+    @include breakpoint(md) {
+        padding-top: 5rem;
+    }
+    @include breakpoint(xl) {
+        padding: 10rem 0;
+    }
+}
+
+img.img-responsive {
+    width: 100%;
+    height: auto;
+}

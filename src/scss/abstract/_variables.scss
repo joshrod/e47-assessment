@@ -1,0 +1,24 @@
+
+/* Colors - Color names from Sipapp on Mac */
+$cyan: #68CBDF;
+$dark-gray: #333333;
+$offblack: #19191A;
+
+/* Fonts */
+@font-face {
+    font-family: 'Hagrid';
+    src: url('../fonts/Hagrid-Regular-trial.ttf') format('truetype');
+}
+$work-sans: "Work Sans", sans-serif;
+$hagrid: "Hagrid", sans-serif;
+$robotoslab: "Roboto Slab", sans-serif;
+
+/* Horizontal Spacing Within Container */
+$sm-x: 1.5rem;
+$md-x: 3rem;
+$lg-x: 5rem;
+
+/* Vertical Spacing Within Container */
+$sm-y: 1.5rem;
+$md-y: 3rem;
+$lg-y: 5rem;

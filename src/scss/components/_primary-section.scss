@@ -1,0 +1,63 @@
+.primary-section {
+    position: relative;
+
+    .primary-section-container {
+        @include breakpoint(md) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .primary-section-content {
+            padding: 3rem $sm-x;
+            @include breakpoint(md) {
+                padding: 0 5rem;
+            }
+            @include breakpoint(lg) {
+                padding: 0 8rem;
+            }
+            @include breakpoint(xl) {
+                padding: 0 12rem;
+            }
+            @include breakpoint(fhd) {
+                padding: 0 20rem;
+            }
+
+            .primary-section-content-title {
+                font-family: $robotoslab;
+                @include breakpoint(xxl) {
+                    font-size: 3rem;
+                }
+            }
+
+            .primary-section-custom-list {
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    @include breakpoint(xxl) {
+                        font-size: 2rem;
+                    }
+                    @include breakpoint(fhd) {
+                        font-size: 2.3rem;
+                    }
+
+                    li {
+                        margin-bottom: 2rem;
+                        padding-left: 3rem;
+                        background-image: url('/wp-content/themes/e47-minimal/assets/img/awesome-check-square.svg');
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        background-size: 1.5rem 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .primary-section-image-container {
+            @include breakpoint(md) {
+                flex: 0 0 45%;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.cta-section {
+    width: 100%;
+    background-image: url('/wp-content/uploads/2022/06/instream-linepatterns.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 5rem 3rem;
+    position: relative;
+    @include breakpoint(md) {
+        height: 40rem;
+        padding: 0;
+    }
+    @include breakpoint(xl) {
+        height: 45rem;
+    }
+    @include breakpoint(xxl) {
+        height: 50rem;
+    }
+    @include breakpoint(fhd) {
+        height: 64rem;
+    }
+
+    .cta-content-container {
+        @include breakpoint(md) {
+            width: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @include breakpoint(lg) {
+            width: 60%;
+            max-width: 92.3rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .cta-content-title {
+            font-family: $hagrid;
+            font-size: 3.6rem;
+            text-align: center;
+            color: white;
+            @include breakpoint(md) {
+                font-size: 4.8rem;
+            }
+            @include breakpoint(xl) {
+                font-size: 6.2rem;
+            }
+            @include breakpoint(xxl) {
+                font-size: 7.2rem;
+            }
+            @include breakpoint(fhd) {
+                font-size: 7.4rem;
+            }
+        }
+
+        .cta-content-paragraph {
+            color: white;
+            text-align: center;
+            @include breakpoint(md) {
+                margin-bottom: 3rem;
+            }
+            @include breakpoint(xxl) {
+                font-size: 2.4rem;
+            }
+            @include breakpoint(fhd) {
+                font-size: 3rem;
+            }
+        }
+
+        .cta-contact-button {
+            width: 15rem;
+            height: 4rem;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            border: 1px solid $cyan;
+            background-color: $cyan;
+            color: $dark-gray;
+            text-decoration: none;
+            text-align: center;
+            line-height: 4rem;
+            transition: all 0.3s;
+            &:hover {
+                background-color: #052b48;
+                color: white;
+                transition: all 0.3s
+            }
+            @include breakpoint(xxl) {
+                width: 18rem;
+            }
+            @include breakpoint(fhd) {
+                width: 21rem;
+                height: 4.5rem;
+                line-height: 4.5rem;
+            }
+        }
+    }
+}

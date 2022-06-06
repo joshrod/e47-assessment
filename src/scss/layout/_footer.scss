@@ -1,0 +1,193 @@
+.footer-main {
+    background-color: $dark-gray;
+    color: white;
+
+    .footer-container {
+        @include breakpoint(md){
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        @include breakpoint(xl) {
+            flex-direction: row;
+        }
+
+        .footer-company-info {
+            margin-bottom: 4rem;
+            @include breakpoint(md) {
+                margin-bottom: 0;
+            }
+            @include breakpoint(xl) {
+                flex: 0 1 25%;
+            }
+            @include breakpoint(fhd) {
+                flex: 0 1 20%;
+            }
+    
+            .footer-company-logo-container {
+                width: 15rem;
+                margin-bottom: 2rem;
+                @include breakpoint(fhd) {
+                    width: 19.5rem;
+                }
+            }
+
+            > p {
+                @include breakpoint(md) {
+                    max-width: 50%;
+                }
+                @include breakpoint(xl) {
+                    max-width: 100%;
+                }
+                @include breakpoint(xxl) {
+                    font-size: 1.8rem;
+                }
+                @include breakpoint(fhd) {
+                    font-size: 2.1rem;
+                }
+            }
+    
+            .footer-company-copyright {
+                font-size: 1.2rem;
+                @include breakpoint(fhd) {
+                    font-size: 1.4rem;
+                }
+    
+                >p {
+                    margin-bottom: 0.5rem;
+                }
+    
+                >a {
+                    color: white;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: $cyan;
+                        transition: color 0.3s;
+                    }
+                }
+            }
+        }
+    
+        .footer-navs {
+            @include breakpoint(md) {
+                width: 100%;
+                margin-bottom: 4rem;
+            }
+            @include breakpoint(xl) {
+                flex: 0 1 55%;
+                margin-bottom: 0;
+            }
+            @include breakpoint(fhd) {
+                flex: 0 1 45%;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+    
+            a {
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s;
+                &:hover {
+                    color: $cyan;
+                    transition: color 0.3s;
+                }
+            }
+    
+            ul {
+                list-style-type: none;
+                padding: 0;
+    
+                li {
+                    margin-bottom: 2rem;
+    
+                    >a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+            .bolded-link {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 2rem;
+            }
+    
+            .underlined-link {
+                text-decoration: underline;
+            }
+
+            .footer-navs-container {
+                @include breakpoint(md) {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .footer-primary-nav,
+                .footer-secondary-nav,
+                .footer-contact-nav {
+                    @include breakpoint(md) {
+                        flex: 0 0 33%;
+                    }
+                    @include breakpoint(xl) {
+                        flex: 0 1 auto;
+                    }
+                }
+
+                .footer-primary-nav,
+                .footer-secondary-nav,
+                .footer-contact-nav-top {
+                    margin-bottom: 4rem;
+                }
+
+                .footer-primary-nav,
+                .footer-secondary-nav {
+                    @include breakpoint(md) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .footer-contact-nav-cta {
+                    width: 11.5rem;
+                    height: 4rem;
+                    display: block;
+                    border: 1px solid white;
+                    text-align: center;
+                    line-height: 4rem;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $dark-gray;
+                        background-color: $cyan;
+                        border: 1px solid $cyan;
+                        transition: all 0.3s;
+                    }
+                }
+
+                .footer-contact-nav-social-container {
+                    display: flex;
+
+                    >a {
+                        margin-right: 2rem;
+                        &:hover {
+                            path {
+                                fill: $cyan;
+                                transition: fill 0.3s;
+                            }
+                        }
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        path {
+                            transition: fill 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
